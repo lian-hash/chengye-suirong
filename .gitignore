@@ -1,0 +1,29 @@
+# ---- 依赖与构建产物 ----
+node_modules/
+dist/
+unpackage/
+.hbuilderx/
+
+# ---- 环境变量（只保留 .env.example）----
+.env
+.env.local
+.env.*.local
+
+# ---- 编辑器与系统 ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 日志与临时文件 ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.timestamp-*.mjs
+
+# ---- 本地调试产物 ----
+*.local
+*.bak
+*.bkp
