@@ -1,0 +1,7 @@
+{
+  "name": "packageSite",
+  "version": "1.0.0",
+  "description": "套餐与场地查询 / 管理（上架、场地 CRUD）",
+  "main": "index.js",
+  "dependencies": {}
+}

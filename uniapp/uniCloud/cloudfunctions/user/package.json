@@ -1,0 +1,7 @@
+{
+  "name": "user",
+  "version": "1.0.0",
+  "description": "用户信息 / 用户列表 / 角色变更",
+  "main": "index.js",
+  "dependencies": {}
+}

@@ -1,0 +1,7 @@
+{
+  "name": "log",
+  "version": "1.0.0",
+  "description": "操作日志查询（管理员）",
+  "main": "index.js",
+  "dependencies": {}
+}

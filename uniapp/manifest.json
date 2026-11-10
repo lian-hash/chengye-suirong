@@ -1,0 +1,32 @@
+{
+  "name": "城野随行",
+  "appid": "",
+  "description": "营地装备租赁一站式平台（C端 uni-app）",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3,
+    "modules": {},
+    "distribute": {
+      "android": {},
+      "ios": {}
+    }
+  },
+  "quickapp": {},
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false
+    },
+    "usingComponents": true
+  },
+  "h5": {
+    "router": {
+      "base": "/"
+    }
+  },
+  "vueVersion": "2"
+}

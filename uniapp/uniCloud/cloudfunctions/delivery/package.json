@@ -1,0 +1,7 @@
+{
+  "name": "delivery",
+  "version": "1.0.0",
+  "description": "配送调度：派送/布置/回收 + 列表",
+  "main": "index.js",
+  "dependencies": {}
+}

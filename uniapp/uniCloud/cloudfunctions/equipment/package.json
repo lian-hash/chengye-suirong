@@ -1,0 +1,7 @@
+{
+  "name": "equipment",
+  "version": "1.0.0",
+  "description": "装备管理：列表 / 消毒 / 更新",
+  "main": "index.js",
+  "dependencies": {}
+}

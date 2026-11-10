@@ -1,0 +1,7 @@
+{
+  "name": "webLogin",
+  "version": "1.0.0",
+  "description": "Web 后台（管理员/企业）登录，签发 JWT",
+  "main": "index.js",
+  "dependencies": {}
+}

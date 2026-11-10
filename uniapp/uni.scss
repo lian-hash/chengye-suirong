@@ -1,0 +1,46 @@
+/**
+ * uni-app 全局 scss 变量（两端主色一致，见 §7.8）
+ * 具体 CSS 变量（--primary 等）定义在 App.vue 的全局 <style> 中。
+ */
+
+/* ---- 主题色（营地绿） ---- */
+$primary: #2E7D32;
+$primary-light: #4CAF50;
+$primary-lighter: #66BB6A;
+
+/* ---- 强调色（价格 / 促销） ---- */
+$accent: #FF8F3F;
+
+/* ---- 中性色 ---- */
+$bg: #F5F7F4;
+$card: #FFFFFF;
+$text: #333333;
+$text-sub: #666666;
+$muted: #999999;
+$border: #EEF0EE;
+$chip-bg: #E8F5E9;
+
+/* ---- 状态色（订单状态贯穿多页，统一取用） ---- */
+$status-pending-bg: #FFF3E0;   /* 待支付 */
+$status-pending-fg: #FF8F3F;
+$status-paid-bg: #E3F2FD;      /* 已支付 */
+$status-paid-fg: #1976D2;
+$status-done-bg: #E8F5E9;      /* 已回收 / 已完成 */
+$status-done-fg: #2E7D32;
+$status-cancel-bg: #F5F5F5;    /* 已取消 / 停用 */
+$status-cancel-fg: #999999;
+
+/* ---- 圆角 ---- */
+$radius-card: 20rpx;
+$radius-btn: 16rpx;
+$radius-chip: 8rpx;
+$radius-img: 16rpx;
+
+/* ---- 阴影（带主色倾向） ---- */
+$shadow-card: 0 8rpx 24rpx rgba(46, 125, 50, 0.08);
+$shadow-hover: 0 12rpx 32rpx rgba(46, 125, 50, 0.14);
+
+/* ---- 间距（以 24rpx 为基准） ---- */
+$gap-page: 24rpx;
+$gap-card: 20rpx;
+$pad-card: 28rpx;

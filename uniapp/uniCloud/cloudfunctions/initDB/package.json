@@ -1,0 +1,7 @@
+{
+  "name": "initDB",
+  "version": "1.0.0",
+  "description": "数据初始化（幂等账号）/ 导入 / 统计 / 清空",
+  "main": "index.js",
+  "dependencies": {}
+}

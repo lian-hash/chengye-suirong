@@ -1,0 +1,7 @@
+{
+  "name": "order",
+  "version": "1.0.0",
+  "description": "订单创建/支付/列表/详情/进度/评价 + Web 管理动作",
+  "main": "index.js",
+  "dependencies": {}
+}

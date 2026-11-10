@@ -1,0 +1,37 @@
+{
+  "name": "chengye-suixing",
+  "version": "1.0.0",
+  "description": "营地装备租赁一站式平台（C端 uni-app，Vue2）",
+  "scripts": {
+    "postinstall": "node scripts/patch-build-deps.js",
+    "gen:icons": "node scripts/gen-tabbar-icons.js",
+    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin UNI_INPUT_DIR=. UNI_CLI_CONTEXT=. vue-cli-service uni-build --watch",
+    "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin UNI_INPUT_DIR=. UNI_CLI_CONTEXT=. vue-cli-service uni-build"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "2.0.2-5020620260917001",
+    "@dcloudio/uni-app-plus": "2.0.2-5020620260917001",
+    "@dcloudio/uni-helper-json": "1.0.0",
+    "@dcloudio/uni-mp-weixin": "2.0.2-5020620260917001",
+    "regenerator-runtime": "^0.13.7",
+    "vue": "^2.6.11",
+    "vuex": "^3.2.0"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-cli-i18n": "2.0.2-5020620260917001",
+    "@dcloudio/uni-cli-shared": "2.0.2-5020620260917001",
+    "@dcloudio/uni-i18n": "2.0.2-5020620260917001",
+    "@dcloudio/uni-migration": "2.0.2-5020620260917001",
+    "@dcloudio/uni-mp-vue": "2.0.2-5020620260917001",
+    "@dcloudio/uni-stacktracey": "2.0.2-5020620260917001",
+    "@dcloudio/uni-template-compiler": "2.0.2-5020620260917001",
+    "@dcloudio/vue-cli-plugin-uni": "2.0.2-5020620260917001",
+    "@dcloudio/webpack-uni-mp-loader": "2.0.2-5020620260917001",
+    "@dcloudio/webpack-uni-pages-loader": "2.0.2-5020620260917001",
+    "@vue/cli-plugin-babel": "4.5.19",
+    "@vue/cli-service": "^4.5.0",
+    "cross-env": "^7.0.2",
+    "postcss-comment": "^2.0.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

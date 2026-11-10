@@ -1,0 +1,7 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "description": "云函数公共模块：response / validator / logger / jwt / authGuard / 双调用模式解析",
+  "main": "index.js",
+  "dependencies": {}
+}

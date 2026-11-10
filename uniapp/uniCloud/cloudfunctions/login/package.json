@@ -1,0 +1,7 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "C端微信小程序静默登录/注册",
+  "main": "index.js",
+  "dependencies": {}
+}
