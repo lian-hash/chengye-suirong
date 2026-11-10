@@ -1,0 +1,21 @@
+/* 主题样式：营地绿主色对齐（两端一致，见 §7.8） */
+:root {
+  /* Element Plus 主色变量 */
+  --el-color-primary: #2e7d32;
+  --el-color-primary-light-3: #4caf50;
+  --el-color-primary-light-5: #66bb6a;
+  --el-color-primary-light-7: #a5d6a7;
+  --el-color-primary-light-8: #c8e6c9;
+  --el-color-primary-light-9: #e8f5e9;
+  --el-color-primary-dark-2: #1b5e20;
+}
+
+/* 通用背景与字体 */
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  background: #f5f7f4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
