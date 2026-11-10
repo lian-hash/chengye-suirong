@@ -1,0 +1,121 @@
+<mxfile host="draw.io" type="device">
+  <diagram name="图OOP-4 UML 类图" id="cysx-oop4">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1080" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="User&#10;——&#10;- userId: String&#10;- openid: String&#10;- role: Enum{guest,user}&#10;——&#10;+ login()&#10;+ loadPermission()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Order&#10;——&#10;- orderId: String&#10;- status: Enum&#10;- amount: Decimal&#10;——&#10;+ create()&#10;+ pay()&#10;+ cancel()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="520" y="60" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="OrderItem&#10;——&#10;- itemId: String&#10;- qty: Int&#10;——&#10;+ computeSub()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="60" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Site&#10;——&#10;- siteId: String&#10;- capacity: Int&#10;- available: Bool&#10;——&#10;+ queryAvailable()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="330" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="Package&#10;——&#10;- pkgId: String&#10;- price: Decimal&#10;- onShelf: Bool&#10;——&#10;+ isOnShelf()&#10;+ checkPeriod()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="750" y="330" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="Equipment&#10;——&#10;- eqId: String&#10;- stock: Int&#10;——&#10;+ checkStock()&#10;+ inOut()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="330" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="DeliveryTask&#10;——&#10;- taskId: String&#10;- status: Enum&#10;——&#10;+ dispatch()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="330" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="UserAuthService&#10;——&#10;«control»&#10;——&#10;+ auth()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="FinanceService&#10;——&#10;«control»&#10;——&#10;+ revenue()&#10;+ refund()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="620" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="OrderService&#10;——&#10;«control»&#10;——&#10;+ create()&#10;+ pay()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="520" y="620" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="PackageService&#10;——&#10;«control»&#10;——&#10;+ savePkg()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="750" y="620" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="EquipmentService&#10;——&#10;«control»&#10;——&#10;+ inOut()&#10;+ sterilize()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="620" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="DeliveryService&#10;——&#10;«control»&#10;——&#10;+ dispatch()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="620" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="MiniProgramView&#10;——&#10;«boundary»&#10;——&#10;+ submitOrder()&#10;+ showResult()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="880" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="WebAdminView&#10;——&#10;«boundary»&#10;——&#10;+ maintain()&#10;+ dispatchUI()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=10;align=center;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="880" width="170" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="1 —— *" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;exitX=0.5;exitY=0;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="30"/><mxPoint x="605" y="30"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="1 —— * 组合" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;startArrow=diamondThin;startFill=1;exitX=0.5;exitY=0;entryX=0.5;entryY=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="30"/><mxPoint x="1065" y="30"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" value="* —— 1" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;exitX=1;exitY=0.27;entryX=0;entryY=0.5;" edge="1" parent="1" source="3" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="95"/><mxPoint x="720" y="395"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="* —— 1" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;exitX=0;exitY=0.885;entryX=0.5;entryY=1;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="175"/><mxPoint x="260" y="490"/><mxPoint x="375" y="490"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" value="聚合 *" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;startArrow=diamondThin;startFill=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="6" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="9" target="2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="11" target="3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="12" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="13" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="14" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.5;entryX=0.235;entryY=1;" edge="1" parent="1" source="10" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="685"/><mxPoint x="500" y="250"/><mxPoint x="560" y="250"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="15" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="依赖" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;dashed=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="16" target="12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="945"/><mxPoint x="720" y="685"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="绘制提示：三类（实体/«boundary»/«control»）用同一矩形并注明版型；每类写 类名/属性/操作；关联标多重度，组合实心菱形、聚合空心菱形；控制类与主管实体同列，依赖画短竖线；跨列连线走预留通道，不穿过任何类框。游客与已登录用户由 User.role 枚举区分，不单列子类。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=1;fontColor=#333333;fontSize=10;align=left;verticalAlign=middle;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1030" width="1380" height="45" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

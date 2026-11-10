@@ -1,0 +1,30 @@
+[
+  {
+    "userId": "mock_openid_001",
+    "nickname": "微信用户A",
+    "role": "C端",
+    "phone": "13800000001",
+    "registerTime": "2026-03-01T08:00:00"
+  },
+  {
+    "userId": "mock_openid_002",
+    "nickname": "微信用户B",
+    "role": "C端",
+    "phone": "13800000002",
+    "registerTime": "2026-03-05T08:00:00"
+  },
+  {
+    "userId": "admin001",
+    "nickname": "系统管理员",
+    "role": "管理员",
+    "phone": "13800000099",
+    "registerTime": "2026-01-01T08:00:00"
+  },
+  {
+    "userId": "ent001",
+    "nickname": "某科技公司",
+    "role": "B端",
+    "phone": "13800000003",
+    "registerTime": "2026-02-01T08:00:00"
+  }
+]

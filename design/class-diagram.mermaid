@@ -1,0 +1,92 @@
+classDiagram
+    class User {
+        +String userId
+        +String nickname
+        +String role
+        +String phone
+        +Date registerTime
+    }
+    class Package {
+        +String packageId
+        +String name
+        +Number price
+        +String items
+        +String seasonTheme
+        +Boolean onShelf
+        +String bannerUrl
+        +Date reservableStart
+        +Date reservableEnd
+        +Array~EquipRef~ equipRefs
+    }
+    class EquipRef {
+        +String equipmentId
+        +Number qty
+    }
+    class Site {
+        +String siteId
+        +String name
+        +String address
+        +Number capacity
+        +String availableStatus
+        +String partner
+    }
+    class Order {
+        +String orderId
+        +String userId
+        +String packageId
+        +String siteId
+        +String useDate
+        +Number quantity
+        +String orderStatus
+        +String payStatus
+        +Number amount
+        +String contactName
+        +String contactPhone
+        +Boolean isBatch
+        +Date createTime
+        +Date payTime
+    }
+    class Equipment {
+        +String equipmentId
+        +String name
+        +Number totalQty
+        +Number availableQty
+        +Number warnThreshold
+        +String status
+        +String disinfectStatus
+        +Date lastDisinfectTime
+        +Number usedCount
+    }
+    class Delivery {
+        +String deliveryId
+        +String orderId
+        +String opType
+        +Date opTime
+        +String operator
+    }
+    class Review {
+        +String reviewId
+        +String orderId
+        +String userId
+        +Number score
+        +String content
+        +Date reviewTime
+    }
+    class Log {
+        +String logId
+        +String operator
+        +String opType
+        +String opTarget
+        +String opContent
+        +String opResult
+        +Date opTime
+    }
+    Order "1" --> "1" User : userId
+    Order "1" --> "1" Package : packageId
+    Order "1" --> "1" Site : siteId
+    Delivery "1" --> "1" Order : orderId
+    Review "1" --> "1" Order : orderId
+    Review "1" --> "1" User : userId
+    Package "1" *-- "many" EquipRef : 装备清单
+    EquipRef "many" --> "1" Equipment : equipmentId
+    Log .. Order : 按 orderId 检索

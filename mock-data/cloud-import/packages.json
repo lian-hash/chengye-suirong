@@ -1,0 +1,89 @@
+[
+  {
+    "packageId": "PKG001",
+    "name": "春日露营基础套餐",
+    "price": 199,
+    "items": "双人帐篷x1, 防潮垫x2, 营地灯x1, 折叠椅x2",
+    "seasonTheme": "春季",
+    "onShelf": true,
+    "bannerUrl": "",
+    "reservableStart": "2026-03-01",
+    "reservableEnd": "2026-05-31",
+    "equipRefs": [
+      {
+        "equipmentId": "EQ001",
+        "qty": 1
+      },
+      {
+        "equipmentId": "EQ002",
+        "qty": 2
+      },
+      {
+        "equipmentId": "EQ003",
+        "qty": 1
+      },
+      {
+        "equipmentId": "EQ007",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "packageId": "PKG002",
+    "name": "夏日星空进阶套餐",
+    "price": 399,
+    "items": "双人帐篷x1, 天幕x1, 充气床垫x2",
+    "seasonTheme": "夏季",
+    "onShelf": true,
+    "bannerUrl": "",
+    "reservableStart": "2026-06-01",
+    "reservableEnd": "2026-08-31",
+    "equipRefs": [
+      {
+        "equipmentId": "EQ001",
+        "qty": 1
+      },
+      {
+        "equipmentId": "EQ004",
+        "qty": 1
+      },
+      {
+        "equipmentId": "EQ005",
+        "qty": 2
+      }
+    ]
+  },
+  {
+    "packageId": "PKG003",
+    "name": "秋日团建尊享套餐",
+    "price": 899,
+    "items": "大型帐篷x2, 长桌x3, 音响x1, 投影仪x1, 烤炉x2",
+    "seasonTheme": "秋季",
+    "onShelf": false,
+    "bannerUrl": "",
+    "reservableStart": "2026-09-01",
+    "reservableEnd": "2026-11-30",
+    "equipRefs": [
+      {
+        "equipmentId": "EQ006",
+        "qty": 2
+      },
+      {
+        "equipmentId": "EQ008",
+        "qty": 3
+      },
+      {
+        "equipmentId": "EQ009",
+        "qty": 1
+      },
+      {
+        "equipmentId": "EQ010",
+        "qty": 1
+      },
+      {
+        "equipmentId": "EQ011",
+        "qty": 2
+      }
+    ]
+  }
+]

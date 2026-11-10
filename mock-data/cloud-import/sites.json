@@ -1,0 +1,26 @@
+[
+  {
+    "siteId": "SITE001",
+    "name": "东湖绿道营地A区",
+    "address": "武汉市东湖生态旅游风景区绿道1号",
+    "capacity": 50,
+    "availableStatus": "可用",
+    "partner": "东湖文旅"
+  },
+  {
+    "siteId": "SITE002",
+    "name": "梁子湖畔露营基地",
+    "address": "武汉市江夏区梁子湖风景区",
+    "capacity": 80,
+    "availableStatus": "可用",
+    "partner": "梁子湖度假区"
+  },
+  {
+    "siteId": "SITE003",
+    "name": "马鞍山森林营地",
+    "address": "武汉市洪山区马鞍山森林公园",
+    "capacity": 30,
+    "availableStatus": "停用",
+    "partner": "森林公园管理处"
+  }
+]

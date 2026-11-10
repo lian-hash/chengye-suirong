@@ -1,0 +1,44 @@
+[
+  {
+    "deliveryId": "DLV001",
+    "orderId": "ORD202603",
+    "opType": "配送",
+    "opTime": "2026-07-02T10:00:00",
+    "operator": "admin001"
+  },
+  {
+    "deliveryId": "DLV002",
+    "orderId": "ORD202604",
+    "opType": "配送",
+    "opTime": "2026-04-02T10:00:00",
+    "operator": "admin001"
+  },
+  {
+    "deliveryId": "DLV003",
+    "orderId": "ORD202604",
+    "opType": "布置",
+    "opTime": "2026-04-02T12:00:00",
+    "operator": "admin001"
+  },
+  {
+    "deliveryId": "DLV004",
+    "orderId": "ORD202605",
+    "opType": "配送",
+    "opTime": "2026-09-01T10:00:00",
+    "operator": "admin001"
+  },
+  {
+    "deliveryId": "DLV005",
+    "orderId": "ORD202605",
+    "opType": "布置",
+    "opTime": "2026-09-01T12:00:00",
+    "operator": "admin001"
+  },
+  {
+    "deliveryId": "DLV006",
+    "orderId": "ORD202606",
+    "opType": "回收",
+    "opTime": "2026-04-03T18:00:00",
+    "operator": "admin001"
+  }
+]

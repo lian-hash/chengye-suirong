@@ -1,0 +1,47 @@
+[
+  {
+    "logId": "LOG001",
+    "operator": "mock_openid_001",
+    "opType": "CREATE_ORDER",
+    "opTarget": "orders",
+    "opContent": "创建订单 ORD_SEED_001",
+    "opResult": "SUCCESS",
+    "opTime": "2026-04-01T10:00:00"
+  },
+  {
+    "logId": "LOG002",
+    "operator": "mock_openid_001",
+    "opType": "PAY",
+    "opTarget": "orders",
+    "opContent": "订单 ORD_SEED_001 模拟支付(MOCK)",
+    "opResult": "SUCCESS",
+    "opTime": "2026-04-01T10:05:00"
+  },
+  {
+    "logId": "LOG003",
+    "operator": "admin001",
+    "opType": "DISPATCH",
+    "opTarget": "orders",
+    "opContent": "订单 ORD202603 配送推进",
+    "opResult": "SUCCESS",
+    "opTime": "2026-07-02T10:00:00"
+  },
+  {
+    "logId": "LOG004",
+    "operator": "admin001",
+    "opType": "RECOVER",
+    "opTarget": "orders",
+    "opContent": "订单 ORD202606 回收完成",
+    "opResult": "SUCCESS",
+    "opTime": "2026-04-03T18:00:00"
+  },
+  {
+    "logId": "LOG005",
+    "operator": "mock_openid_002",
+    "opType": "REVIEW",
+    "opTarget": "reviews",
+    "opContent": "评价订单 ORD202607",
+    "opResult": "SUCCESS",
+    "opTime": "2026-07-21T20:00:00"
+  }
+]

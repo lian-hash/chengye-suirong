@@ -1,0 +1,75 @@
+%% 用例 A：C端下单 → 模拟支付 → 配送调度
+sequenceDiagram
+    actor U as C端用户
+    participant MP as uni-app(小程序)
+    participant CF as 云函数(order)
+    participant DB as 云数据库
+    participant DL as 云函数(delivery)
+    participant DE as 云函数(equipment)
+    participant A as 管理员(Web)
+
+    U->>MP: 选套餐+场地+使用日期+份数
+    MP->>CF: order/create {packageId,siteId,useDate,quantity,...}
+    CF->>DB: 校验 套餐上架/场地容量/装备库存(事务)
+    alt 校验通过
+        CF->>DB: 写 orders(待支付,未支付) + 写 logs
+        CF-->>MP: {code:0, data:{orderId,amount}}
+        U->>MP: 点击模拟支付
+        MP->>CF: order/pay {orderId,payMethod:"MOCK"}
+        CF->>DB: 更新 已支付/已支付 + 写支付时间 + 写 logs
+        CF-->>MP: {code:0, data:{payStatus:"已支付"}}
+        Note over A: 管理员在 Web 推进
+        A->>DL: delivery/dispatch {orderId}
+        DL->>DB: orders→配送中
+        DL->>DE: 扣减装备可用数量(DF011)
+        DE->>DB: equipments.availableQty -= qty
+        DL->>DB: 写 deliveries(配送) + logs
+    else 校验失败
+        CF-->>MP: {code:4003, message:"该场地当日已约满/装备库存不足"}
+    end
+
+%% 用例 B：管理员套餐与场地管理（P2 上架审核）
+sequenceDiagram
+    actor A as 管理员(Web)
+    participant WA as Web后台
+    participant CF as 云函数(packageSite)
+    participant DB as 云数据库
+    actor U as C端用户
+    participant MP as uni-app(小程序)
+
+    A->>WA: 新增/编辑套餐并提交
+    WA->>CF: packageSite/upsertPackage {...}
+    CF->>CF: authGuard(角色=管理员) + validator
+    CF->>DB: 写 packages + logs
+    CF-->>WA: {code:0}
+    A->>WA: 上架/下架套餐
+    WA->>CF: packageSite/setShelf {packageId,onShelf}
+    CF->>DB: 更新 packages.onShelf
+    CF-->>WA: {code:0}
+    U->>MP: 进入首页浏览
+    MP->>CF: packageSite/listPackages
+    CF->>DB: 仅查 onShelf=true 套餐 + availableStatus=可用 场地
+    CF-->>MP: {code:0, data:{packages,sites}}
+
+%% 用例 C：回收消杀 + 用户评价 + 财务统计闭环
+sequenceDiagram
+    actor A as 管理员(Web)
+    participant DL as 云函数(delivery)
+    participant DE as 云函数(equipment)
+    participant DB as 云数据库
+    actor U as C端用户
+    participant CF as 云函数(order)
+    participant FS as 云函数(finance)
+
+    A->>DL: delivery/recover {orderId}
+    DL->>DB: orders→已回收→已完成
+    DL->>DE: 归还装备(DF011)
+    DE->>DB: availableQty += qty, status=可用, disinfectStatus=未消杀
+    DE->>DB: 若 availableQty<=warnThreshold 触发库存预警
+    DL->>DB: 写 deliveries(回收) + logs
+    U->>CF: order/submitReview {orderId,score,content}
+    CF->>DB: 校验 订单=已完成且未评价 → 写 reviews
+    CF-->>U: {code:0, data:{reviewId}}
+    A->>FS: finance/stats {period:"month"}
+    FS->>DB: 聚合 已支付订单量/营收/退款/热门套餐
+    FS-->>A: {code:0, data:{orderCount,revenue,refundAmount,topPackages}}

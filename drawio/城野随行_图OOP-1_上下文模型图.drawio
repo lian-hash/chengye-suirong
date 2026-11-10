@@ -1,0 +1,84 @@
+<mxfile host="Electron">
+  <diagram name="图OOP-1 上下文模型图（系统边界图）" id="cysx-oop1">
+    <mxGraphModel dx="1086" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;strokeWidth=1;dashed=1;fontColor=#666666;fontSize=11;align=left;verticalAlign=top;" value="系统边界" vertex="1">
+          <mxGeometry x="430" y="180" width="440" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=2;fontColor=#333333;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" value="城野随行平台&#xa;（目标系统）" vertex="1">
+          <mxGeometry x="470" y="220" width="360" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="shape=umlActor;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=11;verticalAlign=bottom;" value="C 端用户" vertex="1">
+          <mxGeometry x="100" y="140" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="shape=umlActor;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=11;verticalAlign=bottom;" value="B 端运营人员" vertex="1">
+          <mxGeometry x="100" y="580" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="shape=umlActor;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=11;verticalAlign=bottom;" value="系统管理员" vertex="1">
+          <mxGeometry x="1050" y="560" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;" value="«external system»&#xa;微信开放平台" vertex="1">
+          <mxGeometry x="1050" y="120" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;strokeWidth=1;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;" value="«external system»&#xa;微信支付（模拟）" vertex="1">
+          <mxGeometry x="1050" y="280" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="9" edge="1" parent="1" source="4" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.1;entryX=0;entryY=0.05;" value="登录授权请求/凭证">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="4" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.3;entryX=0;entryY=0.18;" value="浏览查询请求/套餐场地数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="4" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.31;" value="下单请求/订单数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="4" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.7;entryX=0;entryY=0.44;" value="支付请求/支付结果">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="4" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.9;entryX=0;entryY=0.57;" value="评价/退款请求/结果">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="14" edge="1" parent="1" source="5" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.1;entryX=0;entryY=0.68;" value="套餐/场地/装备维护数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="5" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.3;entryX=0;entryY=0.77;" value="配送调度指令/状态">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="5" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.86;" value="批量下单数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="5" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.7;entryX=0;entryY=0.95;" value="统计查询/报表">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="18" edge="1" parent="1" source="3" target="7" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.06;entryX=0;entryY=0.25;" value="授权 code">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" edge="1" parent="1" source="7" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.75;entryX=1;entryY=0.17;" value="openid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="20" edge="1" parent="1" source="3" target="8" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.42;entryX=0;entryY=0.35;" value="支付请求">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="8" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.65;entryX=1;entryY=0.55;" value="模拟回执">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="22" edge="1" parent="1" source="6" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.2;entryX=1;entryY=0.70;" value="权限配置">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="6" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.82;" value="日志检索/审计数据">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="6" target="3" style="html=1;strokeColor=#333333;strokeWidth=1;endArrow=open;endFill=0;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.8;entryX=1;entryY=0.93;" value="统计查询">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

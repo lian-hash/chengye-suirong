@@ -1,0 +1,4 @@
+﻿packageId,name,price,items,seasonTheme,onShelf,bannerUrl,reservableStart,reservableEnd,equipRefs
+PKG001,春日露营基础套餐,199,"帐篷x1, 防潮垫x2, 营地灯x1, 折叠椅x2",春季,True,,2026-03-01,2026-05-31,"[{""equipmentId"":""EQ001"",""qty"":1},{""equipmentId"":""EQ002"",""qty"":2},{""equipmentId"":""EQ003"",""qty"":1}]"
+PKG002,夏日星空进阶套餐,399,"天幕x1, 帐篷x1, 充气床垫x2, 氛围灯串x1, 烧烤架x1",夏季,True,,2026-06-01,2026-08-31,"[{""equipmentId"":""EQ001"",""qty"":1},{""equipmentId"":""EQ004"",""qty"":1},{""equipmentId"":""EQ005"",""qty"":2}]"
+PKG003,秋日团建尊享套餐,899,"大型帐篷x2, 长桌x3, 音响x1, 投影仪x1, 烤炉x2",秋季,False,,2026-09-01,2026-11-30,"[{""equipmentId"":""EQ006"",""qty"":2},{""equipmentId"":""EQ007"",""qty"":1},{""equipmentId"":""EQ004"",""qty"":1}]"

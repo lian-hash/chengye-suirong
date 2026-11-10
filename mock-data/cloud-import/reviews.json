@@ -1,0 +1,18 @@
+[
+  {
+    "reviewId": "REV001",
+    "orderId": "ORD_SEED_001",
+    "userId": "mock_openid_001",
+    "score": 5,
+    "content": "装备齐全，营地环境很好，下次还来！",
+    "reviewTime": "2026-04-06T20:00:00"
+  },
+  {
+    "reviewId": "REV002",
+    "orderId": "ORD202607",
+    "userId": "mock_openid_002",
+    "score": 4,
+    "content": "夏日星空很美，就是天幕有点小。",
+    "reviewTime": "2026-07-21T20:00:00"
+  }
+]
